@@ -148,3 +148,12 @@ li.menu {
   padding: 54px;
   color: #fff;
 }
+.image__box img {
+    width: 100%;
+}
+.body_section {
+    display: flex;
+}
+.sidenbar_section {
+  width: 25%;
+}
