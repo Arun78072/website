@@ -6,6 +6,7 @@ import { AiOutlineHeart } from 'react-icons/ai';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 
+
 function Header() {
   return (
     <div className="header_comp">
@@ -27,6 +28,7 @@ function Header() {
           </ul>
         </div>
       </div>
+
     </div>
   );
 }

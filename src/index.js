@@ -2,14 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Header from './Header';
+import Footer from './Footer'
 import reportWebVitals from './reportWebVitals';
-import Allproduct from './Component/Allproduct'
+import App from "./App"
+import { Route, Routes } from 'react-router-dom';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <>
     <Header />
-    <Allproduct />
-  </React.StrictMode>,
+    <App />
+    <Footer />
+   
+  </>,
   document.getElementById('root')
 );
 
