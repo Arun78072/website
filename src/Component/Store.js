@@ -19,6 +19,7 @@ function Store({ items }) {
     // const [filterdItems, setfilterdItems] = useState(items);
     return (
         <>
+        
             {/* <input onChange={e=>{
             let f = items.filter(item => item.title.toLowerCase().include(e.target.value));
             setfilterdItems(f);

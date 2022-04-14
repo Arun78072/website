@@ -1,10 +1,10 @@
-import './Style.css';
+import '../Style.css';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { CgMenuGridR } from 'react-icons/cg';
 import { AiOutlineUser } from 'react-icons/ai';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
-
+import { Routes, Route, Outlet, Link } from "react-router-dom";
 
 
 function Header() {
@@ -22,13 +22,14 @@ function Header() {
         </div>
         <div>
           <ul className="header_icon">
+            <li><Link to="/">Store</Link></li>
+            <li><Link to="/product">Product</Link></li>
             <li><AiOutlineUser /></li>
             <li><AiOutlineHeart /></li>
             <li><AiOutlineShoppingCart /></li>
           </ul>
         </div>
       </div>
-
     </div>
   );
 }

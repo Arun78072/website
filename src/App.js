@@ -1,28 +1,31 @@
-import { useState, useEffect } from 'react';
-import Store from './Component/Store';
-import axios from 'axios';
-import {
-    BrowserRouter,
-    Routes,
-    Route,
-} from "react-router-dom";
-
-
+import * as React from "react";
+import { Routes, Route, Outlet, Link } from "react-router-dom";
+import Main from './Component/Main'
+import Product from './Component/Product'
 
 
 function App() {
-    const [StoreItem, setStoreItem] = useState([]);
-    useEffect(() => {
-        axios.get("https://fakestoreapi.com/products").then(({ data }) => {
-            setStoreItem(data);
-        });
-    }, []);
-
-    return (
-        <>
-            <h1>These are all product </h1>
-            <Store items={StoreItem} />
-        </>
-    )
+  return (
+    <div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Main />} />
+          <Route path="/product" element={<Product />} />
+        </Route>
+      </Routes>
+    </div>
+  );
 }
+
+function Layout() {
+  return (
+    <div>
+      <hr />
+      <Outlet />
+    </div>
+  );
+}
+
+
+
 export default App;
